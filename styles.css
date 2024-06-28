@@ -1,0 +1,124 @@
+h1 {
+    margin: auto;
+    background-color: aqua;
+    color:blue;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+#main {
+    font-weight: bold;
+    font-size: 24px;
+    margin-left: auto; 
+    width: 300px;
+    background-color:beige;
+}
+
+button {
+    margin: 2px;
+    padding:3px;
+}
+
+#prestige > button{
+    background-color: aquamarine;
+    width:300px;
+    margin-right: auto;
+    padding: 3px;
+}
+
+.bttns {
+    width:300px;
+    margin-left:auto;
+    padding: 3px;
+}
+
+.upgrades {
+    float: right;
+    background-color:aquamarine;
+    width: 400px;
+}
+
+.container img {
+    position:relative;
+    transition: all .2s ease-in-out;
+
+}
+
+.container img:hover { transform: scale(1.10); }
+.container img:active { transform: scale(0.99);}
+
+.shopButton {
+    background-color: #b5b5b5;
+    transition: all .2s ease-in-out;
+    border-radius: 10px;
+    width: 100%;
+    margin: 10px 0px 10px 0px;
+}
+
+.shopButton:hover {
+    background-color: #c7c7c7;
+    transition: all .2s ease-in-out;
+}
+
+.shopButton, .image {
+    width: 25%;
+}
+
+.shopButton img {
+    background-color: #d4d4d4;
+    height: 64px;
+    width: 64px;
+}
+
+.shopButton, .nameAndCost p {
+    margin: 0px;
+    width: 60%;
+}
+
+.shopButton, .nameAndCost p:first-of-type {
+    font-size:24px;
+}
+
+.shopButton #clickPower {
+    margin-right:4px;
+    font-size: 36px;
+    color:#595959;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.shopButton #md {
+    margin-right:13px;
+    font-size: 36px;
+    color:#595959;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.shopButton #kd {
+    margin-right:16px;
+    font-size: 36px;
+    color:#595959;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.shopButton #ek {
+    margin-right:7px;
+    font-size: 36px;
+    color:#595959;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.shopButton #nk {
+    margin-right:22px;
+    font-size: 36px;
+    color:#595959;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.unselectable {
+    user-select: none;
+}
+
+.sectionFooter {
+    margin-top: 20%;
+}

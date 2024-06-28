@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="lv-lv">
+<head>
+    <title>RTKlife</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        img {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        </style>
+</head>
+
+<body>
+    <h1>RTKlife</h1>
+    <p id="main">Stipendīja: <span id="score">0</span>&euro;</p>
+    <div class="container unselectable">
+    <img src="images/rtklogo.png" alt="RTKlogo" style="width:30%; height:50%" onclick="addScore(clickPower)" class="center">
+    </div>
+
+    <div class="bttns">
+        <table class="shopButton unselectable" onclick="buyCP()">
+            <tr>
+                <td class="image"><img src="images/zimulis.png" alt="zimulis"></td>
+                <td class="nameAndCost">
+                    <p>Zīmulis</p>
+                    <p><span id="cpcost">200</span>&euro;</p>
+                </td>
+                <td class="amount"><span id="clickPower">1</span></td>
+            </tr>
+        </table>
+        <table class="shopButton unselectable" onclick="buyMD()">
+            <tr>
+                <td class="image"><img src="images/majasdarbi.png" alt="majasdarbi"></td>
+                <td class="nameAndCost">
+                    <p>Mājasdarbi</p>
+                    <p><span id="mdcost">30</span>&euro;</p>
+                </td>
+                <td class="amount"><span id="md">0</span></td>
+            </tr>
+        </table>
+        <table class="shopButton unselectable" onclick="buyKD()">
+            <tr>
+                <td class="image"><img src="images/kontroldarbi.png" alt="kontroldarbi"></td>
+                <td class="nameAndCost">
+                    <p>Kontroldarbi</p>
+                    <p><span id="kdcost">150</span>&euro;</p>
+                </td>
+                <td class="amount"><span id="kd">0</span></td>
+            </tr>
+        </table>
+        <table class="shopButton unselectable" onclick="buyEK()">
+            <tr>
+                <td class="image"><img src="images/eksameni.png" alt="eksameni"></td>
+                <td class="nameAndCost">
+                    <p>Eksāmeni</p>
+                    <p><span id="ekcost">1000</span>&euro;</p>
+                </td>
+                <td class="amount"><span id="ek">0</span></td>
+            </tr>
+        </table>
+        <table class="shopButton unselectable" onclick="buyNC()">
+            <tr>
+                <td class="image"><img src="images/nakamaisKurss.png" alt="nakamais-kurss"></td>
+                <td class="nameAndCost">
+                    <p>Nākamais kurss</p>
+                    <p><span id="nkcost">10000</span>&euro;</p>
+                </td>
+                <td class="amount"><span id="nk">0</span></td>
+            </tr>
+        </table>
+    </div>
+    <div class="sectionFooter">
+        <h5>Ralfa Jefimova pašizveidots laika patērētājs &#128513;</h5>
+        <a href="mypage.html">Atpakaļ uz sākuma lapu</a>
+    </div>
+    <script>
+        var score = 0;
+        var clickPower = 1;
+        var cpcost = 200;
+
+        var mdcost = 30;
+        var md = 0;
+        var kdcost = 150;
+        var kd = 0;
+        var ekcost = 1000;
+        var ek = 0;
+        var nkcost = 10000;
+        var nk = 0;
+        var upg1cost = 250;
+        
+        function buyCP() {
+            if (score >= cpcost) {
+                score = score - cpcost;
+                clickPower = clickPower * 2;
+                cpcost = Math.round(cpcost * 1.75);
+
+                document.getElementById("score").innerHTML = score;
+                document.getElementById("clickPower").innerHTML = clickPower;
+                document.getElementById("cpcost").innerHTML = cpcost;
+            }
+        }
+
+        function buyMD() {
+            if (score >= mdcost) {
+                score = score - mdcost;
+                md = md + 1;
+                mdcost = Math.round(mdcost*1.15);
+
+                document.getElementById("score").innerHTML = score;
+                document.getElementById("md").innerHTML = md;
+                document.getElementById("mdcost").innerHTML = mdcost;
+            }
+        }
+
+        function buyKD(){
+            if (score >= kdcost) {
+                score = score - kdcost;
+                kd = kd+1;
+                kdcost = Math.round(kdcost*1.3);
+
+                document.getElementById("score").innerHTML = score;
+                document.getElementById("kd").innerHTML = kd;
+                document.getElementById("kdcost").innerHTML = kdcost;
+            }
+        }
+
+        function buyEK(){
+            if (score >= ekcost) {
+                score = score - ekcost;
+                ek = ek+1;
+                ekcost = Math.round(ekcost*1.4);
+
+                document.getElementById("score").innerHTML = score;
+                document.getElementById("ek").innerHTML = ek;
+                document.getElementById("ekcost").innerHTML = ekcost;
+            }
+        }
+
+        function buyNC(){
+            if (nk <= 4){
+                if (score >= nkcost) {
+                    nk = nk+1;
+                    nkcost = Math.round(nkcost*2.5);
+                    clickPower = 5*nk;
+                    score = 0;
+                    md = 0;
+                    kd = 0;
+                    ek = 0;
+                    
+                    document.getElementById("score").innerHTML = score;
+                    document.getElementById("clickPower").innerHTML = clickPower;
+                    document.getElementById("cpcost").innerHTML = cpcost;
+                    document.getElementById("md").innerHTML = md;
+                    document.getElementById("mdcost").innerHTML = mdcost;
+                    document.getElementById("kd").innerHTML = kd;
+                    document.getElementById("kdcost").innerHTML = kdcost;
+                    document.getElementById("ek").innerHTML = ek;
+                    document.getElementById("ekcost").innerHTML = ekcost;
+                    document.getElementById("nk").innerHTML = nk;
+                    document.getElementById("nkcost").innerHTML = nkcost;
+                }
+            }
+        }
+
+        function addScore(amount) {
+            score = score + amount;
+            document.getElementById("score").innerHTML = score;
+        }
+
+        setInterval(function() {
+            if(nk > 0) {
+            score = score + (md * 1) * (nk+1);
+            score = score + (kd * 5) * (nk+1);
+            score = score + (ek * 20) * (nk+1);
+            }
+            else {
+            score = score + md * 1;
+            score = score + kd * 5;
+            score = score + ek * 20;
+            }
+            document.getElementById("score").innerHTML = score;
+        }, 1000); // 1000 millisekundes = 1 sekunde
+    </script>
+
+</body>
+
+
+
+</html>

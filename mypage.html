@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="lv">
+    <head>
+        <!--Tituls manai lapai-->
+        <title>RJ Mājaslapa</title>
+        <meta charset="utf-8">
+        <!--Responsivitāte atkarībā no ekrāna-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Tiek pievienots CSS kods lapai-->
+        <link rel="stylesheet" type="text/css" href="/pirmaisuzd/uzlabojumi.css" >
+        <!--- Tiek pievienota mājaslapai ikona-->
+        <link rel="icon" type="image/x-icon" href="/pirmaisuzd/images/favicon.ico">
+        <!-- Tiek pievienots ārējss JavaScript fails pie mājaslapas-->
+        <script src="secret_controler.js"></script>
+    </head>
+
+<body>
+    <!-- Teksts par mani un lietām, ko man patīk darīt. Kā arī tekstā ir sarkani vārdi, kuri veido atslēgu, kas jāievada citā lapā-->
+<header id="titleMe">
+<h1>Par mani</h1>
+</header>
+    <div class="content">
+    <p id="aboutMe">Mani sauc Ralfs un <span class="keyword">es</span> mācos Rīgas Tehniskajā Koledžā. <br> 
+    Šobrīd apgūstu programmētāja tehniķa specialitāti un varu teikt, ka 
+    man patīk programmēt, jo tas ir kreatīvs veids, kā parādīt Pasaulei, uz ko Tu esi spējīgs. <br> <br>
+    Es <span class="keyword">mīlu</span> lasīt grāmatas un tieši šogad es esmu apņēmies izlasīt 24 grāmatas. Protams,
+    tas nebūs viegli, taču es zinu, ka es to spēšu izdarīt. <br> Es lasu visāda veida žanrus, no fikcijas līdz pat
+    filozofijai un psiholoģijai, lasot daudzveidīgas grāmatas es iepazīstos ar šo autora pieredzi un ieguldīto darbu,
+    kas attīsta arī manu domāšanu. Kā arī varu minēt to, ka es lasu gan angļu valodā, gan latviešu valodā, jo tas palielina
+    attiecīgi manu vārdu krājumu un uzlabo mana paša spējas sarunāties ar citiem.</p>
+    </div>
+    <h4>Dažas grāmatas, kuras esmu izlasījis:</h4>
+    <!--Grāmatas, kuras es esmu izlasījis un uz tām var nospiest, lai aizietu uz to attiecīgajām lapām, kur dziļāk var iepazīties ar tām-->
+    <div class="bookImages unselectable">
+    <img style=margin:17px src="images/book1.jpg" width="120" height="200" alt="Think and Grow Rich">
+    <img style=margin:17px src="images/book2.jpg" width="120" height="200" alt="Heroes of Olympus">
+    <img style=margin:17px src="images/book3.jpg" width="120" height="200" alt="Fatimas Hand">
+    <img style=margin:17px src="images/book4.jpg" width="120" height="200" alt="Golden Son">
+    <img style=margin:17px src="images/book5.jpg" width="120" height="200" alt="Art of War">
+    <img style=margin:17px src="images/book6.jpg" width="120" height="200" alt="Priest of Bones">
+    <img style=margin:17px src="images/book7.jpg" width="120" height="200" alt="7 Noons">
+    <img style=margin:17px src="images/book8.jpg" width="120" height="200" alt="City and City">
+    <img style=margin:17px src="images/book9.jpg" width="120" height="200" alt="Art of Reading Thoughts">
+    </div>
+    <div class="content">
+    <p id="gameText">Varu vēl minēt, ka man patīk savā brīvajā laikā spēlēt videospēles, kuras mūsdienās ir
+        fantastiski attīstījušās, līdz pat tādam līmenim, ka redzamais ekrānā ar katru gadu tuvojas īstajai realitātei.
+        Arī es esmu izveidojis spēli, ar kuru es spēju dalīties <a href="./rtklife.html">šeit</a>.
+    </p>
+    </div>
+
+    <div class="content">
+    <p id="homeText">Es pats esmu no Cēsīm, kur ir iespējams iet uz visāda veida koncertiem un pasākumiem, kā
+        arī šeit ir liels stadions, kur ir iespējams nodarboties ar dažādiem sporta veidiem.<span class="keyword"> Cēsis</span>
+        ir brīnišķīga pilsēta ar bagātu vēsturi un vairākiem muzejiem, kā arī šeit ir milzīga baznīca, kuras priekšpagalmā ir ūdens
+        strūklaka. Varu minēt, ka šeit vēl ir ļoti daudz resturāni ar daudzveidīgām ēdiena kartēm, man, personīgi patīk doties
+        uz picēriju &apos;Pagrabiņš&apos;, jo tur tiek veidotas ļoti garšīgas picas pa salīdzinoši lētu cenu.
+    </p>
+
+    </div>
+
+    <div id="secret">
+        <form id="frm1">
+            Ievadiet atslēgu: <input type="text" name="key" value="">
+        </form>
+        <button onclick="secret()">Submit</button>
+
+    </div>
+
+</body>
+</html>
